@@ -1,0 +1,1 @@
+# go-batch-put-idioms
