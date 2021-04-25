@@ -1,0 +1,19 @@
+{
+    "TableName": "forum",
+    "KeySchema": [
+      {
+        "AttributeName": "Name",
+        "KeyType": "HASH"
+      }
+    ],
+    "AttributeDefinitions": [
+      {
+        "AttributeName": "Name",
+        "AttributeType": "S"
+      }
+    ],
+    "ProvisionedThroughput": {
+      "ReadCapacityUnits": 10,
+      "WriteCapacityUnits": 10
+    }
+}
