@@ -5,12 +5,12 @@ import (
 	"fmt"
 	"log"
 
-	"github.com/ma91n/batchidioms"
+	. "github.com/ma91n/batchidioms"
 )
 
 func main() {
 	ctx := context.Background()
-	forums := batchidioms.LoadForums()
+	forums := LoadForums()
 
 	for i := 0; i < len(forums); i += 25 {
 		end := i + 25
@@ -18,7 +18,7 @@ func main() {
 			end = len(forums)
 		}
 
-		if err := batchidioms.BatchWrite(ctx, forums[i:end]); err != nil {
+		if err := BatchWrite(ctx, forums[i:end]); err != nil {
 			log.Fatal(err)
 		}
 	}
